@@ -1,0 +1,76 @@
+/* Smooth fade transitions */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    transition: opacity 0.6s ease-in-out; /* Smooth transition */
+}
+
+/* Fade in when the page loads */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Fade everything out when leaving */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    margin: 15px 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover {
+    color: gray;
+}
+
+.logo {
+    font-size: 250px;
+    font-weight: 700;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.page-description {
+    text-align: center;
+    font-size: 20px;
+    color: gray;
+}
